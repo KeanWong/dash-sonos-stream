@@ -4,16 +4,13 @@ Installation
 ---
 1. Follow the instructions on the [dash-test project](https://github.com/KeanWong/dash-test) to configure your Dash button and install all the other requirements (including _scapy_).
 2. Install the additional requirements for this project using `pip install -r requirements.txt'.`
-3. Make sure your computer is on the same subnet as your Sonos players (usually the same Wifi network is fine). Discover the name of all of the players on the network by running `python ./list_players.py`
-
-The list will look something like this:
-
+3. Make sure your computer is on the same subnet as your Sonos players (usually the same Wifi network is fine). Discover the name of all of the players on the network by running `python ./list_players.py`    
+The list will look something like this:    
 `"Garage"`  
 `"Kitchen"`  
 `"Study"`  
 `"Dining Room"`  
-
- The double quotation marks around the player names are inserted to delineate when long payer names with spaces start and end. Do not copy the quotes in the next step.
+The double quotation marks around the player names are inserted to delineate when long payer names with spaces start and end. Do not copy the quotes in the next step.
 4. In _print_current_uri.py_, edit line 26 to set the _sonos_player_name_ to the name of the player you want to steam to.
 5. Using your usual Sonos controller (e.g. the Sonos phone app), manually start the player you selected to play the stream that you want to trigger when you push the Dash button.
 6. Run `python ./print_current_uri.py` to print the uri of the broadcast stream you want to trigger when the Dash button is pressed.  It will look something like:  
